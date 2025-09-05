@@ -54,6 +54,11 @@ async def on_ready():
     print('------')
 
 @client.tree.command()
+async def ping(interaction: discord.Interaction):
+    """pong!"""
+    await interaction.response.send_message(f'pong!')
+    
+@client.tree.command()
 async def hello(interaction: discord.Interaction):
     """Says hello!"""
     await interaction.response.send_message(f'Hi, {interaction.user.mention}')
@@ -71,6 +76,7 @@ async def stop(interaction: discord.Interaction):
 
 
 client.run(TOKEN)
+
 
 
 
