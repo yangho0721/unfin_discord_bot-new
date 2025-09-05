@@ -65,6 +65,7 @@ async def stop(interaction: discord.Interaction):
     """stop bot"""
     if interaction.user.id != OWNER_ID:
         await interaction.response.send_message("You are not the owner of the bot.", ephemeral=True)
+        print(interaction.user.id)
         return
     await interaction.response.send_message("Stopping the bot...", ephemeral=True)
     print("Shutting down…")
@@ -72,4 +73,5 @@ async def stop(interaction: discord.Interaction):
 
 
 client.run(TOKEN)
+
 
