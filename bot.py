@@ -8,8 +8,6 @@ TOKEN = os.environ['DISCORD_TOKEN']
 OWNER_ID = int(os.getenv("DISCORD_OWNER", "0")) # 從環境變數讀取 OWNER_ID，轉成 int
 MY_GUILD = discord.Object(id=1376201573520244746)  # replace with your guild id
 
-print(OWNER_ID)
-
 class MyClient(discord.Client):
     # Suppress error on the User attribute being None since it fills up later
     user: discord.ClientUser
@@ -73,6 +71,7 @@ async def stop(interaction: discord.Interaction):
 
 
 client.run(TOKEN)
+
 
 
 
