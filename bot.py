@@ -5,7 +5,7 @@ from discord import app_commands
 #--------------------------------------------------
 
 TOKEN = os.environ['DISCORD_TOKEN']
-OWNER_ID = os.environ['DISCORD_OWNER']
+OWNER_ID = int(os.getenv("DISCORD_OWNER", "0")) # 從環境變數讀取 OWNER_ID，轉成 int
 MY_GUILD = discord.Object(id=1376201573520244746)  # replace with your guild id
 
 print(OWNER_ID)
@@ -73,5 +73,6 @@ async def stop(interaction: discord.Interaction):
 
 
 client.run(TOKEN)
+
 
 
