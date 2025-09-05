@@ -32,7 +32,7 @@ class MyClient(discord.Client):
         await self.tree.sync(guild=MY_GUILD) # 同步指定伺服器指令 → 測試用（馬上生效）
         
         # 同步全域指令 → 給其他伺服器用（要等一段時間）
-        #await self.tree.sync()
+        await self.tree.sync()
 
 
 intents = discord.Intents.default()
